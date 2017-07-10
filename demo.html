@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css" />
+
+    <style>
+
+    </style>
+
+    <script src="assets/js/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+    <script src="assets/js/html5shiv.min.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+</head>
+
+<body class="no-skin">
+
+
+<div class="main-container ace-save-state" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.loadState('main-container')}catch(e){}
+    </script>
+
+    <div id="sidebar" class="sidebar                  responsive                    ace-save-state">
+        <script type="text/javascript">
+            try{ace.settings.loadState('sidebar')}catch(e){}
+        </script>
+
+
+
+
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+            <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="index.html">首页</a>
+                    </li>
+                </ul><!-- /.breadcrumb -->
+
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="请输入搜索内容" class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="ace-icon fa fa-search nav-search-icon"></i>
+								</span>
+                    </form>
+                </div><!-- /.nav-search -->
+            </div>
+
+            <div class="page-content">
+                <div class="supportFoot">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" id="tablePadd">
+                            <div class="container-fluid">
+
+                                <div class="row income">
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tableMar">
+                                        <div class="table-responsive">
+                                            <table class="table tableMar table-bordered hidden-xs table-hover">
+                                                <caption class="green"><h4>部门营业汇总</h4></caption>
+                                                <thead>
+                                                <tr>
+                                                    <td>部门</td>
+                                                    <td>营业收入</td>
+                                                    <td>直接成本</td>
+                                                    <td>毛利润</td>
+                                                    <td>营业税及附加</td>
+                                                    <td>期间费用</td>
+                                                    <td>纯利润</td>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="departs">
+
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-bordered visible-xs table-hover">
+                                                <caption class="green"><h4>部门营业汇总</h4></caption>
+                                                <tbody class="departsXs">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="table-responsive">
+
+
+                                            <table class="table table-bordered hidden-xs profitCan">
+
+                                            </table>
+
+
+                                            <table class="table table-bordered visible-xs profitCanXs">
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                                        <div class="index-main"></div>
+
+                                    </div>
+
+
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                                        <div class="index-main"></div>
+
+                                    </div>
+
+
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                                        <div class="index-main"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 indexRight">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">收入TOP10</div>
+                                        <ul class="panel-body list-group lis incomeTop">
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">毛利TOP10</div>
+                                        <ul class="panel-body list-group lis grossTop">
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cheng" style="height: 9px;"></div>
+                <div class="row">
+                    <div class="footerOwn">
+                        <div class="footer-innerOwn">
+                            <div class="footer-contentOwn">
+
+
+                                &nbsp; &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div>
+
+
+
+<script src="./assets/jquery/jquery.js"></script>
+
+<script src="./assets/bootstrap/js/bootstrap.js"></script>
+
+<script src="./assets/echarts/echarts.js"></script>
+
+<script type="text/javascript">
+
+
+    $(document).ready(function (){
+        $.ajax({
+            url : "btable_data.json",
+            type : "POST",
+            dataType : "Json",
+            success : function (data){
+                console.log(data);
+//						营业收入
+                var str = '';
+                var inc = data.Data;
+                str += 	'<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">';
+                str += 	'			<div class="panel panel-info">';
+                str += 	'				<div class="panel-heading"><mask>'+inc.Income+'</mask></div>';
+                str += 	'				<div class="panel-body">营业收入</div>';
+                str += 	'			</div>';
+                str += 	'		</div>';
+                str += 	'		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">';
+                str += 	'			<div class="panel panel-info">';
+                str += 	'				<div class="panel-heading"><mask>'+inc.Cost+'</mask></div>';
+                str += 	'				<div class="panel-body">直接成本</div>';
+                str += 	'			</div>';
+                str += 	'		</div>';
+                str += 	'		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">';
+                str += 	'			<div class="panel panel-info">';
+                str += 	'				<div class="panel-heading"><mask>'+inc.Profit+'</mask></div>';
+                str += 	'				<div class="panel-body">毛利</div>';
+                str += 	'			</div>';
+                str += 	'		</div>';
+                $(".income").html(str);
+
+//						部门收入
+                var depart = data.Data.DepartSummarize;
+                var departStr = '',departsStr = '';
+                if (depart && depart.length > 0){
+                    $.each(depart,function (n,item){
+                        departStr += '<tr>';
+                        departStr += '	<td><mask>'+item.DepartName+'</mask></td>';
+                        departStr += '	<td><mask>'+item.Income+'</mask></td>';
+                        departStr += '	<td><mask>'+item.Cost+'</mask></td>';
+                        departStr += '	<td><mask>'+item.OperationTax+'</mask></td>';
+                        departStr += '	<td><mask>'+item.Profit+'</mask></td>';
+                        departStr += '	<td><mask>'+item.Financing+'</mask></td>';
+                        departStr += '	<td><mask>'+item.NetProfit+'</mask></td>';
+                        departStr += '</tr>';
+                    })
+                }
+                $(".departs").html(departStr);
+                if (depart && depart.length > 0){
+                    departsStr += '<tr>';
+                    departsStr += '	   <td>部门</td>';
+                    $.each(depart,function (n,item){
+                        departsStr += '<td>'+item.DepartName+'</td>';
+                    })
+                    departsStr += '			</tr>';
+                    departsStr += '			<tr>';
+                    departsStr += '				<td>营业收入</td>';
+                    $.each(depart,function (n,item){
+                        departsStr += '			<td><mask>'+item.Income+'</mask></td>';
+                    })
+                    departsStr += '			</tr>';
+                    departsStr += '			<tr>';
+                    departsStr += '				<td>直接成本</td>';
+                    $.each(depart,function (n,item){
+                        departsStr += '			<td><mask>'+item.Cost+'</mask></td>';
+                    })
+                    departsStr += '			</tr>';
+                    departsStr += '			<tr>';
+                    departsStr += '				<td>毛利润</td>';
+                    $.each(depart,function (n,item){
+                        departsStr += '			<td><mask>'+item.OperationTax+'</mask></td>';
+                    })
+                    departsStr += '			</tr>';
+                    departsStr += '			<tr>';
+                    departsStr += '				<td>营业税及附加</mask></td>';
+                    $.each(depart,function (n,item){
+                        departsStr += '			<td><mask>'+item.Profit+'</mask></td>';
+                    })
+                    departsStr += '			</tr>';
+                    departsStr += '			<tr>';
+                    departsStr += '				<td>期间费用</td>';
+                    $.each(depart,function (n,item){
+                        departsStr += '			<td><mask>'+item.Financing+'</mask></td>';
+                    })
+                    departsStr += '			</tr>';
+                    departsStr += '			<tr>';
+                    departsStr += '				<td>纯利润</td>';
+                    $.each(depart,function (n,item){
+                        departsStr += '			<td><mask>'+item.NetProfit+'</mask></td>';
+                    })
+                    departsStr += '			</tr>';
+                }
+                $(".departsXs").html(departsStr);
+
+//						盈利能力
+                var profitStr = '',profitStrXs = '';
+                var profitAbility = data.Data;
+                profitStr +='		<caption class="green"><h4 >盈利能力</h4></caption>';
+                profitStr +='		<tbody>';
+                profitStr +='			<tr class="info">';
+                profitStr +='				<td>';
+                profitStr +='					<blockquote>';
+                profitStr +='						<p><mask>'+profitAbility.AvgMoney+'</mask></p>';
+                profitStr +='						<footer>平均占用资金</footer>';
+                profitStr +='					</blockquote>';
+                profitStr +='				</td>';
+                profitStr +='				<td>';
+                profitStr +='					<blockquote>';
+                profitStr +='						<p><mask>'+profitAbility.AvgStock+'</mask></p>';
+                profitStr +='						<footer>平均库存</footer>';
+                profitStr +='					</blockquote>';
+                profitStr +='				</td>';
+                profitStr +='				<td>';
+                profitStr +='					<blockquote>';
+                profitStr +='						<p><mask>'+profitAbility.ReceiveDebt+'</mask></p>';
+                profitStr +='						<footer>应收账款</footer>';
+                profitStr +='					</blockquote>';
+                profitStr +='				</td>';
+                profitStr +='			</tr>';
+                profitStr +='		</tbody>';
+                $(".profitCan").html(profitStr);
+
+
+                profitStrXs +='	<caption class="green"><h4>盈利能力</h4></caption>';
+                profitStrXs +='	<tbody>';
+                profitStrXs += '   <tr>';
+                profitStrXs += '		<td>';
+                profitStrXs += '			<blockquote>';
+                profitStrXs += '				<p><mask>'+profitAbility.AvgMoney+'</mask></p>';
+                profitStrXs += '				<footer>平均占用资金</footer>';
+                profitStrXs += '			</blockquote>';
+                profitStrXs += '		</td>';
+                profitStrXs += '	</tr>';
+                profitStrXs += '   <tr>';
+                profitStrXs += '		<td>';
+                profitStrXs += '			<blockquote>';
+                profitStrXs += '				<p><mask>'+profitAbility.AvgStock+'</mask></p>';
+                profitStrXs += '				<footer>平均库存</footer>';
+                profitStrXs += '			</blockquote>';
+                profitStrXs += '		</td>';
+                profitStrXs += '	</tr>';
+                profitStrXs += '   <tr>';
+                profitStrXs += '		<td>';
+                profitStrXs += '			<blockquote>';
+                profitStrXs += '				<p><mask>'+profitAbility.ReceiveDebt+'</mask></p>';
+                profitStrXs += '				<footer>应收账款</footer>';
+                profitStrXs += '			</blockquote>';
+                profitStrXs += '		</td>';
+                profitStrXs += '	</tr>';
+                $(".profitCanXs").html(profitStrXs);
+
+//						周转率
+
+//						收入top10
+                var incomeT = data.Data.IncomeTop10;
+                var incomeStr = '';
+                $.each(incomeT,function (n,item){
+                    incomeStr += '<li class="list-group-item lisItem">';
+                    incomeStr += '<span>N0.'+item.index+'</span>';
+                    incomeStr += '<span>来自：'+item.name+'</span>';
+                    incomeStr += '<span>创收：'+item.value+'</span>';
+                    incomeStr += '</li>';
+                })
+                console.log(incomeT);
+                $(".incomeTop").html(incomeStr);
+//						毛利top10
+                var grossProfit = data.Data.ProfitTop10;
+                var grossProStr = '';
+                $.each(grossProfit,function (n,item){
+                    grossProStr += '<li class="list-group-item lisItem">';
+                    grossProStr += '<span>N0.'+item.index+'</span>';
+                    grossProStr += '<span>来自：'+item.name+'</span>';
+                    grossProStr += '<span>创收：'+item.value+'</span>';
+                    grossProStr += '</li>';
+                })
+                $(".grossTop").html(grossProStr);
+            }
+        })
+
+
+
+
+        //千分位转换
+        $('mask').each(function (){
+            var nums =  parseInt($(this).html());
+            if (!isNaN(nums)){
+                $(this).html(fmoney(nums));
+            };
+        })
+    })
+</script>
+</body>
+</html>
